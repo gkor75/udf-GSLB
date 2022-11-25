@@ -11,6 +11,7 @@
               - backend:
                   service:
                     name: app1
+                    port:
+                      number: 80
                 pathType: Prefix
                 path: /
-
