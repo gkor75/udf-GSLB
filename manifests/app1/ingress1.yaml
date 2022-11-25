@@ -2,6 +2,7 @@
      kind: Ingress
      metadata:
       name: app1
+      namespace: app1
      spec:
       ingressClassName: f5
       rules:
