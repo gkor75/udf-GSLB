@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+        - name: app1
+          image: f5devcentral/f5-demo-httpd:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: F5DEMO_APP
+              value: "k3s App 1"
+            - name: F5DEMO_NODENAME
+              value: "k3s App 1"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app1
+spec:
+  ports:
+    - port: 8001
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: app1
