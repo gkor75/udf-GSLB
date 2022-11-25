@@ -1,0 +1,16 @@
+     apiVersion: networking.k8s.io/v1
+     kind: Ingress
+     metadata:
+      name: test-ingress
+     spec:
+      ingressClassName: f5
+      rules:
+        - host: app1.k3s.net
+          http:
+            paths:
+              - backend:
+                  service:
+                    name: app1
+                pathType: Prefix
+                path: /
+
