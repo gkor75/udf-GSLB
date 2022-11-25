@@ -29,9 +29,10 @@ metadata:
   name: app1
 spec:
   ports:
-    - port: 8001
+    - port: 80
       targetPort: 80
       protocol: TCP
       name: http
+      nodePort: 30101
   selector:
     app: app1
