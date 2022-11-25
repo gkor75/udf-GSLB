@@ -34,5 +34,6 @@ spec:
       protocol: TCP
       name: http
       nodePort: 30101
+  type: NodePort
   selector:
     app: app1
