@@ -14,7 +14,7 @@ spec:
     chart: f5-bigip-ctlr
     helm:
       valueFiles:
-        - 
+        - https://raw.githubusercontent.com/gkor75/udf-GSLB/charts/manifests/bigipctrl/bigipCtrl-siteA.yaml
   project: default
 name: bigipctrlA
 type: application
