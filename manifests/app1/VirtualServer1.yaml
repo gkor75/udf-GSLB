@@ -6,6 +6,8 @@ metadata:
   name: app1
 spec:
   host: app1.k3s.net
+  virtualServerAddress: "10.1.10.62"
+  httpTraffic: allow
   pools:
   - monitor:
       interval: 3
