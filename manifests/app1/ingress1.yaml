@@ -1,18 +1,18 @@
-     apiVersion: networking.k8s.io/v1
-     kind: Ingress
-     metadata:
-      name: app1
-      namespace: app1
-     spec:
-      ingressClassName: f5
-      rules:
-        - host: app1.k3s.net
-          http:
-            paths:
-              - backend:
-                  service:
-                    name: app1
-                    port:
-                      number: 80
-                pathType: Prefix
-                path: /
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+name: app1
+namespace: app1
+spec:
+ingressClassName: f5
+rules:
+  - host: app1.k3s.net
+    http:
+      paths:
+        - backend:
+            service:
+              name: app1
+              port:
+                number: 80
+          pathType: Prefix
+          path: /
