@@ -3,7 +3,7 @@ kind: VirtualServer
 metadata:
   labels:
     f5cr: "true"
-  name: app1
+  name: app1vs
 spec:
   host: app1.k3s.net
   virtualServerAddress: "10.1.10.62"
