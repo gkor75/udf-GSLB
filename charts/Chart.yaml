@@ -1,0 +1,10 @@
+---
+apiVersion: v2
+name: bigipCtrl
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+dependencies:
+  - name: f5-bigip-ctlr
+    version: 0.0.22
+    repository: https://f5networks.github.io/charts/stable
