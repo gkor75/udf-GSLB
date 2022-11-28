@@ -20,9 +20,11 @@ spec:
             - containerPort: 80
           env:
             - name: F5DEMO_APP
-              value: "k3s App 1"
+              value: "website"
             - name: F5DEMO_NODENAME
               value: "k3s App 1"
+            - name: F5DEMO_COLOR
+              value: "f56f42"
 ---
 apiVersion: v1
 kind: Service
