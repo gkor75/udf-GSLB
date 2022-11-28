@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bigipctrlA
+  name: bigipctrla
   namespace: argocd
 spec:
   project: default
@@ -9,14 +9,10 @@ spec:
     path: charts
     repoURL: https://github.com/gkor75/udf-GSLB.git
     targetRevision: charts
+    helm:
+      valueFiles:
+      - values.yaml
+      
   destination:
     namespace: kube-system
     server: 'https://kubernetes.default.svc'
-name: bigipctrlA
-type: application
-version: 1.0.0
-appVersion: 1.0.0
-dependencies:
-  - name: bigipctrlA
-    version: latest
-    repository: 'https://f5networks.github.io/charts/stable'
