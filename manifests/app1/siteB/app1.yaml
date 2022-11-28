@@ -22,7 +22,7 @@ spec:
             - name: F5DEMO_APP
               value: "website"
             - name: F5DEMO_NODENAME
-              value: "k3s App 1"
+              value: "k3s App 1 Site B"
             - name: F5DEMO_COLOR
               value: "f56f42"
 ---
