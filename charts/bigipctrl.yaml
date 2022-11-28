@@ -1,0 +1,26 @@
+apiVersion: v2
+kind: Application
+metadata:
+  name: bigipctrlA
+spec:
+  destination:
+    name: ''
+    namespace: kube-system
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoURL: 'https://f5networks.github.io/charts/stable'
+    targetRevision: 0.0.22
+    chart: f5-bigip-ctlr
+    helm:
+      valueFiles:
+        - 
+  project: default
+name: bigipctrlA
+type: application
+version: 1.0.0
+appVersion: 1.0.0
+dependencies:
+  - name: bigipctrlA
+    version: latest
+    repository: 'https://f5networks.github.io/charts/stable'
