@@ -12,7 +12,7 @@ spec:
   - monitor:
       interval: 3
       recv: "200"
-      send: /
+      send: "GET / HTTP/1.1\r\nHost: app1.k3s.net\r\n\r\n"
       timeout: 7
       type: http
     path: /
